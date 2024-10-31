@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="pemesanan_ruangan_view_form_id" model="ir.ui.view">
+        <field name="name">pemesanan.ruangan.form</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <form string="Pemesanan Ruangan">
+                <sheet>
+                    <group>
+                        <field name="booking_number" readonly="1"/>
+                        <field name="room_id"/>
+                        <field name="booking_name"/>
+                        <field name="booking_date"/>
+                        <field name="status" readonly="1"/>
+                        <field name="notes"/>
+                    </group>
+                    <footer>
+                        <button name="action_proses_pemesanan" string="Proses Pemesanan" type="object"
+                                attrs="{'invisible': [('status', '=', 'done')]}"
+                                class="oe_highlight"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="pemesanan_ruangan_tree_view_id" model="ir.ui.view">
+        <field name="name">Pemesanan Ruangan Tree View</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Pemesanan Ruangan">
+                <field name="booking_number"/>
+                <field name="room_id"/>
+                <field name="booking_name"/>
+                <field name="booking_date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
+

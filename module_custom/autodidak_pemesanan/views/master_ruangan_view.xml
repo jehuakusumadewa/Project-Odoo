@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="master_ruangan_view_form_id" model="ir.ui.view">
+        <field name="name">Master Ruangan Form</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <form string="Master Ruangan">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="room_type"/>
+                        <field name="location"/>
+                        <field name="photo" widget="image"/>
+                        <field name="capacity"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="master_ruangan_tree_view_id" model="ir.ui.view">
+        <field name="name">Mater Ruangan Tree</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Master Ruangan">
+                <field name="name"/>
+                <field name="room_type"/>
+                <field name="location"/>
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

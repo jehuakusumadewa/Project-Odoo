@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="parent_menu_pemesanan_id" name="Manajemen Ruangan" sequence="10"/>
+
+    <menuitem id="child_menu_pemesanan_ruangan_id" name="Pemesanan Ruangan"
+              parent="parent_menu_pemesanan_id" action="action_pemesanan_ruangan" sequence="10"/>
+</odoo>
